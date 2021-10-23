@@ -1,0 +1,177 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+    background-color: rgb(219, 148, 55);
+    width: 100%;
+    min-height: 725.5px;
+    padding-top: 2%;
+}
+
+.distribution{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    min-height: 500px;
+    width: 90%;
+    background-color: rgba(241, 214, 138, 0.637);
+    margin: auto;
+    box-shadow: 0px 0px 33px inset rgb(216, 151, 87), 0px 0px 11px orange;
+    border: 1px solid rgba(250, 238, 186, 0.685);
+}
+
+.dealers-box{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(228, 218, 218, 0.472);
+    box-shadow: 0px 0px 33px rgb(216, 151, 87), 0px 0px 150px inset rgb(235, 215, 179);
+    border: 1px solid rgba(250, 238, 186, 0.685);
+    width: 90%;
+    min-height: 400px;
+    margin-top: 3%;
+    gap: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+}
+
+.container-availables{
+    width: 91%;
+    min-height: 100px;
+    margin: auto;
+    margin-top: 35px;
+    margin-right: 5%;
+    background-color: rgba(241, 214, 138, 0.637);
+    box-shadow: 0px 0px 33px inset rgb(216, 151, 87), 0px 0px 11px orange;
+    border: 1px solid rgba(250, 238, 186, 0.685);
+}
+
+.dealers-available{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(228, 218, 218, 0.472);
+    width: 90%;
+    min-height: 60px;
+    margin: auto;
+    margin-top: 25px;
+    box-shadow: 0px 0px 113px rgb(231, 206, 160), 0px 0px 150px inset rgb(235, 215, 179);
+    border: 1px solid rgba(250, 238, 186, 0.685);
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.dealer, .order-in-progress{
+    display: block;
+    width: 50px;
+    height: 10px;
+    margin-top: 5px;
+}
+
+.order-in-progress img{
+    border-radius: 50%;
+    width: 100%;
+    background-color: rgb(228, 57, 57);
+}
+
+.dealer img{
+    border-radius: 50%;
+    width: 100%;
+    background-color: greenyellow;
+}
+
+.day{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20%;
+    min-height: 350px;
+    background-color: transparent;
+    padding: 1px;
+}
+
+.hour{
+    cursor: pointer;
+    border: 1px solid black;
+    width: 100%;
+    height: 15px;
+    background-color: rgb(13, 151, 13);
+    box-shadow: 0px 0px 5px inset greenyellow;
+    color: white;
+}
+
+.occupied{
+    cursor: pointer;
+    border: 1px solid black;
+    width: 100%;
+    height: 15px;
+    background-color: rgb(165, 10, 10);
+    box-shadow: 0px 0px 11px inset rgb(236, 144, 144);
+    color: white;
+}
+
+.presentation{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 20px;
+    padding: 5%;
+    padding-top: 30px;
+    top: 200px;
+    left: 250px;
+    right: 0px;
+    bottom: 0px;
+    width: 50%;
+    height: 130px;
+    box-shadow: 0px 0px 101px rgb(241, 144, 17), 0px 0px 33px inset rgb(216, 181, 87);
+    background-color: rgb(236, 183, 38);
+}
+.label{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.presentation input{
+    font-size: 50px;
+    border-radius: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 10px grey;
+}
+
+.buttons{
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+    background-color: rgb(230, 72, 72);
+    box-shadow: 0px 0px 11px inset rgb(240, 4, 4) 2px 2px 10px gray;
+    color: white;
+    font-size: 40px;
+    border-radius: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.change-name{
+    margin: 2% 30%;
+}
+
+#name{
+    border-radius: 20px;
+    font-size: 30px;
+}
+
+@media (max-width:600px){
+    .distribution{
+        width: 99%;
+    }
+    .container-availables{
+        width: 99%;
+        margin-top: 0px;
+    }
+    .dealers-available{
+        margin-top: 20px;
+    }
+}
