@@ -6,7 +6,6 @@ let button = document.getElementById('button');
 
 let user = '';
 let ordersInTravel = [];
-let orderGo = [];
 
 button.addEventListener('click', function (e) {
     user = input.value;
@@ -60,10 +59,6 @@ function drawSquares() {
 }
 
 function takeDealer(dealer) {
-    let dealers = document.getElementsByClassName('hour');
-    let takes = document.getElementsByClassName('order-in-progress')
-    let arr = [...dealers, ...takes];
-
     if (dealer.className == 'hour') {
         order(dealer);
         ordersInTravel.push(user, dealer)
