@@ -23,7 +23,8 @@ input.addEventListener('keydown', function (e) {
     }
 })
 
-function drawSquares() {
+function drawSquares(option = 0) {
+    console.log(option)
     let date1 = '8'
     let date2 = '00';
 
@@ -63,10 +64,37 @@ function takeDealer(dealer) {
         order(dealer);
         ordersInTravel.push(user, dealer)
     } else {
+        let aux = ordersInTravel.indexOf(dealer);
         if (ordersInTravel.length == 0 || ordersInTravel.includes(user) && ordersInTravel.includes(dealer)) {
-            if (ordersInTravel[ordersInTravel.indexOf(user) + 1] === dealer) {
-                ordersInTravel.splice(ordersInTravel.indexOf(user), 1)
+            if (ordersInTravel[aux] == dealer && ordersInTravel[aux - 1] == user) {
+                ordersInTravel.splice(aux - 1, 2)
                 liberate(dealer)
+            }
+        }
+    }
+    if (ordersInTravel.length > 15) {
+        allReds();
+    } else {
+        allGreen();
+    }
+}
+
+function allReds() {
+    for (let i = 0; i < box.children.length; i++) {
+        for (let j = 0; j < days[i].children.length; j++) {
+            days[i].children[j].classList = 'occupied'
+        }
+    }
+}
+
+function allGreen() {
+    for (let i = 0; i < box.children.length; i++) {
+        for (let j = 0; j < days[i].children.length; j++) {
+            if (!ordersInTravel.includes(days[i].children[j])) {
+                days[i].children[j].classList = 'hour'
+            } else {
+                console.log('continue')
+                continue;
             }
         }
     }
@@ -86,7 +114,7 @@ function order(order) {
     }
 
     if (find == 0) {
-        console.log('Todos ocupados')
+
     }
 
 }
