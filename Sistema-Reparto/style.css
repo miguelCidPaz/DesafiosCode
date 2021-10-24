@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+html{
+    overflow: hidden;
+}
+
 main{
     background-color: rgb(219, 148, 55);
     width: 100%;
@@ -163,6 +167,18 @@ main{
     font-size: 30px;
 }
 
+@media (max-width:860px) {
+    .presentation{
+        top: 100px;
+        left: 100px;
+        height: 220px;
+    }
+    #name{
+        left: 10px;
+        margin-left: -100px;
+    }
+}
+
 @media (max-width:600px){
     .distribution{
         width: 99%;
@@ -175,3 +191,4 @@ main{
         margin-top: 20px;
     }
 }
+
